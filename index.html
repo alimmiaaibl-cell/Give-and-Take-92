@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Give and Take 92 — Style for every budget. Men's, women's and kids' fashion.">
+  <title>Give and Take 92 | Style for every budget</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <img src="assets/logo.png" alt="Give and Take 92 logo">
+      <span>Give and Take <b>92</b></span>
+    </a>
+    <nav>
+      <a href="#home" data-bn="হোম" data-en="Home">হোম</a>
+      <a href="#shop" data-bn="শপ" data-en="Shop">শপ</a>
+      <a href="#about" data-bn="আমাদের সম্পর্কে" data-en="About">আমাদের সম্পর্কে</a>
+      <a href="#contact" data-bn="যোগাযোগ" data-en="Contact">যোগাযোগ</a>
+    </nav>
+    <button id="langBtn" class="lang">English</button>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="pill" data-bn="সবার জন্য স্টাইল" data-en="Style for everyone">সবার জন্য স্টাইল</span>
+        <h1 data-bn="Give and Take 92" data-en="Give and Take 92">Give and Take 92</h1>
+        <h2 data-bn="Style for every budget" data-en="Style for every budget">Style for every budget</h2>
+        <p data-bn="পুরুষ, নারী ও শিশুদের পোশাক—আপনার বাজেটের মধ্যে সুন্দর ও মানসম্মত পছন্দ।"
+           data-en="Men's, women's and kids' fashion — stylish choices for every budget.">
+          পুরুষ, নারী ও শিশুদের পোশাক—আপনার বাজেটের মধ্যে সুন্দর ও মানসম্মত পছন্দ।
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#shop" data-bn="এখনই শপ করুন" data-en="Shop now">এখনই শপ করুন</a>
+          <a class="btn secondary" href="#contact" data-bn="অর্ডার করতে যোগাযোগ করুন" data-en="Contact to order">অর্ডার করতে যোগাযোগ করুন</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="assets/logo.png" alt="Give and Take 92">
+        <div class="trust">
+          <span>🛍️ <b data-bn="অনলাইন অর্ডার" data-en="Online orders">অনলাইন অর্ডার</b></span>
+          <span>💰 <b data-bn="বাজেট-ফ্রেন্ডলি" data-en="Budget friendly">বাজেট-ফ্রেন্ডলি</b></span>
+          <span>🚚 <b data-bn="ক্যাশ অন ডেলিভারি" data-en="Cash on delivery">ক্যাশ অন ডেলিভারি</b></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="categories container" id="shop">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow" data-bn="ক্যাটাগরি" data-en="Categories">ক্যাটাগরি</span>
+        <h2 data-bn="আপনার পছন্দের স্টাইল বেছে নিন" data-en="Choose your style">আপনার পছন্দের স্টাইল বেছে নিন</h2>
+      </div>
+      <span class="note" data-bn="নতুন কালেকশন শিগগিরই" data-en="New collection coming soon">নতুন কালেকশন শিগগিরই</span>
+    </div>
+    <div class="cat-grid">
+      <button class="cat" data-filter="men"><span>👔</span><strong data-bn="পুরুষ" data-en="Men">পুরুষ</strong><small data-bn="শার্ট • পাঞ্জাবি • টি-শার্ট" data-en="Shirts • Panjabi • T-shirts">শার্ট • পাঞ্জাবি • টি-শার্ট</small></button>
+      <button class="cat" data-filter="women"><span>👗</span><strong data-bn="নারী" data-en="Women">নারী</strong><small data-bn="ড্রেস • থ্রি-পিস • হিজাব" data-en="Dresses • Three-piece • Hijab">ড্রেস • থ্রি-পিস • হিজাব</small></button>
+      <button class="cat" data-filter="kids"><span>🧒</span><strong data-bn="শিশু" data-en="Kids">শিশু</strong><small data-bn="ছেলে ও মেয়েদের পোশাক" data-en="Boys & girls fashion">ছেলে ও মেয়েদের পোশাক</small></button>
+    </div>
+
+    <div class="products-head">
+      <h2 data-bn="জনপ্রিয় পণ্য" data-en="Featured products">জনপ্রিয় পণ্য</h2>
+      <div class="filters">
+        <button class="filter active" data-filter="all" data-bn="সব" data-en="All">সব</button>
+        <button class="filter" data-filter="men" data-bn="পুরুষ" data-en="Men">পুরুষ</button>
+        <button class="filter" data-filter="women" data-bn="নারী" data-en="Women">নারী</button>
+        <button class="filter" data-filter="kids" data-bn="শিশু" data-en="Kids">শিশু</button>
+      </div>
+    </div>
+    <div id="productGrid" class="product-grid"></div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container about-grid">
+      <div>
+        <span class="eyebrow" data-bn="আমাদের লক্ষ্য" data-en="Our mission">আমাদের লক্ষ্য</span>
+        <h2 data-bn="ভালো পোশাক, ন্যায্য দামে" data-en="Good fashion at fair prices">ভালো পোশাক, ন্যায্য দামে</h2>
+        <p data-bn="Give and Take 92 এমন একটি অনলাইন ফ্যাশন ব্র্যান্ড হিসেবে এগোতে চায় যেখানে বিভিন্ন বাজেটের মানুষ নিজের পছন্দের পোশাক সহজে খুঁজে পান।"
+           data-en="Give and Take 92 aims to be an online fashion brand where people with different budgets can easily find styles they love.">
+          Give and Take 92 এমন একটি অনলাইন ফ্যাশন ব্র্যান্ড হিসেবে এগোতে চায় যেখানে বিভিন্ন বাজেটের মানুষ নিজের পছন্দের পোশাক সহজে খুঁজে পান।
+        </p>
+      </div>
+      <div class="promise">
+        <div>✓ <span data-bn="সাশ্রয়ী পছন্দ" data-en="Affordable choices">সাশ্রয়ী পছন্দ</span></div>
+        <div>✓ <span data-bn="অর্ডারভিত্তিক শুরু" data-en="Order-based start">অর্ডারভিত্তিক শুরু</span></div>
+        <div>✓ <span data-bn="সহজ যোগাযোগ" data-en="Easy communication">সহজ যোগাযোগ</span></div>
+        <div>✓ <span data-bn="কাস্টমারের প্রতি যত্ন" data-en="Customer care">কাস্টমারের প্রতি যত্ন</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact container">
+    <div>
+      <span class="eyebrow" data-bn="অর্ডার ও যোগাযোগ" data-en="Order & contact">অর্ডার ও যোগাযোগ</span>
+      <h2 data-bn="আপনার পছন্দের পণ্য জানতে আমাদের মেসেজ করুন" data-en="Message us about the product you want">আপনার পছন্দের পণ্য জানতে আমাদের মেসেজ করুন</h2>
+      <p data-bn="WhatsApp/Facebook নম্বর বা লিংক যোগ করার পর এই অংশটি সরাসরি কাস্টমারের সঙ্গে যুক্ত করা যাবে।"
+         data-en="After adding your WhatsApp/Facebook details, this section can connect customers directly to you.">
+        WhatsApp/Facebook নম্বর বা লিংক যোগ করার পর এই অংশটি সরাসরি কাস্টমারের সঙ্গে যুক্ত করা যাবে।
+      </p>
+    </div>
+    <div class="contact-card">
+      <label data-bn="আপনার নাম" data-en="Your name">আপনার নাম</label>
+      <input id="name" placeholder="নাম / Name">
+      <label data-bn="কী পণ্য চান?" data-en="What product do you want?">কী পণ্য চান?</label>
+      <textarea id="message" rows="4" placeholder="পণ্যের নাম, সাইজ, রং..."></textarea>
+      <button class="btn primary" onclick="sendMessage()" data-bn="মেসেজ প্রস্তুত করুন" data-en="Prepare message">মেসেজ প্রস্তুত করুন</button>
+      <small id="msgNote"></small>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer">
+    <div><b>Give and Take 92</b><br><span data-bn="Style for every budget" data-en="Style for every budget">Style for every budget</span></div>
+    <div>© 2026 Give and Take 92</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
