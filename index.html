@@ -4,343 +4,653 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Give and Take 92 - Style for every budget. Men's, women's and kids' fashion.">
+  <meta name="description" content="Give and Take 92 - প্রতিটি বাজেটের জন্য স্টাইল। পুরুষ, নারী ও শিশুদের পোশাক অনলাইনে অর্ডার করুন।">
+  <meta name="keywords" content="Give and Take 92, পোশাক, ফ্যাশন, শপিং, বাংলাদেশ, men's fashion, women's fashion, kids fashion">
+  <meta name="author" content="Give and Take 92">
 
-  <title>Give and Take 92 | Style for every budget</title>
+  <title>Give and Take 92 | প্রতিটি বাজেটের জন্য স্টাইল</title>
 
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Bengali", sans-serif;
+      line-height: 1.7;
+      background: #f5f9ff;
+      color: #222;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    /* Header */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-area img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .logo-text h1 {
+      font-size: 20px;
+      color: #0756a3;
+      line-height: 1.2;
+    }
+
+    .logo-text p {
+      font-size: 12px;
+      color: #555;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      padding: 8px 12px;
+      color: #333;
+      border-radius: 7px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      background: #eaf4ff;
+      color: #0756a3;
+    }
+
+    .language-btn {
+      background: #0756a3;
+      color: white !important;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #eaf5ff, #ffffff);
+      padding: 75px 20px;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .hero h2 {
+      color: #0756a3;
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .hero h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 25px;
+      color: #555;
+      font-size: 17px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+      border: none;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: #0756a3;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #043d75;
+    }
+
+    .btn-light {
+      background: white;
+      color: #0756a3;
+      border: 1px solid #0756a3;
+    }
+
+    .btn-light:hover {
+      background: #eaf4ff;
+    }
+
+    /* Common Section */
+    section {
+      padding: 60px 20px;
+    }
+
+    .section-container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-size: 30px;
+      color: #0756a3;
+      margin-bottom: 7px;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    /* Categories */
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .category-card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+      border: 1px solid #edf2f7;
+    }
+
+    .category-icon {
+      font-size: 40px;
+      margin-bottom: 8px;
+    }
+
+    .category-card h3 {
+      color: #0756a3;
+      margin-bottom: 5px;
+    }
+
+    /* Products */
+    #shop {
+      background: #ffffff;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      background: #fff;
+      border: 1px solid #e5e9ef;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 7px 20px rgba(0,0,0,0.09);
+    }
+
+    .product-image {
+      height: 220px;
+      background: #edf5fc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 65px;
+    }
+
+    .product-info {
+      padding: 18px;
+    }
+
+    .product-info h3 {
+      color: #222;
+      margin-bottom: 5px;
+      font-size: 19px;
+    }
+
+    .product-category {
+      color: #777;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      color: #0756a3;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .order-btn {
+      width: 100%;
+      border: none;
+      background: #0756a3;
+      color: white;
+      padding: 10px;
+      border-radius: 7px;
+      font-size: 15px;
+    }
+
+    .order-btn:hover {
+      background: #043d75;
+    }
+
+    /* About */
+    .about-box {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+    }
+
+    .about-box p {
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .about-list {
+      padding-left: 20px;
+      color: #444;
+    }
+
+    .about-list li {
+      margin-bottom: 7px;
+    }
+
+    /* Features */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .feature {
+      background: white;
+      padding: 22px 15px;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid #edf2f7;
+    }
+
+    .feature-icon {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .feature h3 {
+      color: #0756a3;
+      font-size: 17px;
+    }
+
+    .feature p {
+      font-size: 13px;
+      color: #666;
+    }
+
+    /* Contact */
+    #contact {
+      background: #eaf5ff;
+    }
+
+    .contact-box {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .contact-box p {
+      margin: 8px 0;
+      color: #555;
+    }
+
+    .contact-email {
+      color: #0756a3;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background: #0756a3;
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    /* Mobile */
+    @media (max-width: 850px) {
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .categories {
+        grid-template-columns: 1fr;
+      }
+
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .header-container {
+        flex-direction: column;
+      }
+
+      nav {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 55px 18px;
+      }
+
+      .hero h2 {
+        font-size: 29px;
+      }
+
+      .hero h3 {
+        font-size: 19px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .features {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .logo-text h1 {
+        font-size: 18px;
+      }
+
+      nav a {
+        font-size: 13px;
+        padding: 7px 9px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
   <!-- Header -->
-  <header class="topbar">
-    <div class="container nav">
+  <header>
+    <div class="header-container">
 
-      <a class="brand" href="#home">
-        <img src="assets/logo.png" alt="Give and Take 92 logo">
-        <span>Give and Take <b>92</b></span>
+      <a href="#home" class="logo-area">
+        <img src="assets/logo.png" alt="Give and Take 92 Logo">
+        <div class="logo-text">
+          <h1>Give and Take 92</h1>
+          <p>Style for Every Budget</p>
+        </div>
       </a>
 
       <nav>
-        <a href="#home" data-bn="হোম" data-en="Home">হোম</a>
-        <a href="#shop" data-bn="শপ" data-en="Shop">শপ</a>
-        <a href="#about" data-bn="আমাদের সম্পর্কে" data-en="About">আমাদের সম্পর্কে</a>
-        <a href="#contact" data-bn="যোগাযোগ" data-en="Contact">যোগাযোগ</a>
+        <a href="#home">হোম</a>
+        <a href="#shop">শপ</a>
+        <a href="#about">আমাদের সম্পর্কে</a>
+        <a href="#contact">যোগাযোগ</a>
+        <a href="#shop" class="language-btn">English</a>
       </nav>
-
-      <button id="langBtn" class="lang">English</button>
 
     </div>
   </header>
 
 
-  <!-- Main -->
-  <main id="home">
+  <!-- Hero -->
+  <main>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <section id="home" class="hero">
+      <div class="hero-content">
 
-      <div class="container hero-grid">
+        <h2>Give and Take 92</h2>
 
-        <div>
+        <h3>প্রতিটি বাজেটের জন্য স্টাইল</h3>
 
-          <span
-            class="pill"
-            data-bn="সবার জন্য"
-            data-en="Style for everyone">
-            সবার জন্য
-          </span>
+        <p>
+          আপনার বাজেট ও পছন্দ অনুযায়ী সুন্দর এবং মানসম্মত পোশাক খুঁজে নিন।
+          পুরুষ, নারী ও শিশুদের জন্য বিভিন্ন ধরনের পোশাক নিয়ে আমাদের অনলাইন যাত্রা।
+        </p>
 
-          <h1
-            data-bn="Give and Take 92"
-            data-en="Give and Take 92">
-            Give and Take 92
-          </h1>
-
-          <h2
-            data-bn="প্রতিটি বাজেটের জন্য স্টাইল"
-            data-en="Style for every budget">
-            প্রতিটি বাজেটের জন্য স্টাইল
-          </h2>
-
-          <p
-            data-bn="পুরুষ, নারী ও শিশুদের জন্য আধুনিক ও আকর্ষণীয় পোশাক — প্রতিটি বাজেটের জন্য উপযোগী।"
-            data-en="Men's, women's and kids' fashion - stylish choices for every budget.">
-            পুরুষ, নারী ও শিশুদের জন্য আধুনিক ও আকর্ষণীয় পোশাক — প্রতিটি বাজেটের জন্য উপযোগী।
-          </p>
-
-          <div class="actions">
-
-            <a
-              class="btn primary"
-              href="#shop"
-              data-bn="এখনই শপ করুন"
-              data-en="Shop now">
-              এখনই শপ করুন
-            </a>
-
-            <a
-              class="btn secondary"
-              href="#contact"
-              data-bn="অর্ডারের জন্য যোগাযোগ করুন"
-              data-en="Contact to order">
-              অর্ডারের জন্য যোগাযোগ করুন
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <div class="hero-card">
-
-          <img
-            src="assets/logo.png"
-            alt="Give and Take 92">
-
-          <div class="trust">
-
-            <span>
-              <b
-                data-bn="অনলাইন অর্ডার"
-                data-en="Online orders">
-                অনলাইন অর্ডার
-              </b>
-            </span>
-
-            <span>
-              <b
-                data-bn="বাজেট ফ্রেন্ডলি"
-                data-en="Budget friendly">
-                বাজেট ফ্রেন্ডলি
-              </b>
-            </span>
-
-            <span>
-              <b
-                data-bn="ক্যাশ অন ডেলিভারি"
-                data-en="Cash on delivery">
-                ক্যাশ অন ডেলিভারি
-              </b>
-            </span>
-
-          </div>
-
+        <div class="hero-buttons">
+          <a href="#shop" class="btn btn-primary">শপ করুন</a>
+          <a href="#about" class="btn btn-light">আমাদের সম্পর্কে</a>
         </div>
 
       </div>
-
     </section>
 
 
     <!-- Categories -->
-    <section class="categories container" id="shop">
+    <section>
+      <div class="section-container">
 
-      <div class="section-head">
-
-        <div>
-
-          <span
-            class="eyebrow"
-            data-bn="ক্যাটাগরি"
-            data-en="Categories">
-            ক্যাটাগরি
-          </span>
-
-          <h2
-            data-bn="আপনার পছন্দের স্টাইল বেছে নিন"
-            data-en="Choose your style">
-            আপনার পছন্দের স্টাইল বেছে নিন
-          </h2>
-
+        <div class="section-title">
+          <h2>ক্যাটাগরি</h2>
+          <p>আপনার পছন্দের ক্যাটাগরি থেকে পোশাক বেছে নিন</p>
         </div>
 
-        <span
-          class="note"
-          data-bn="নতুন কালেকশন শীঘ্রই আসছে"
-          data-en="New collection coming soon">
-          নতুন কালেকশন শীঘ্রই আসছে
-        </span>
+        <div class="categories">
 
+          <div class="category-card">
+            <div class="category-icon">👔</div>
+            <h3>পুরুষদের পোশাক</h3>
+            <p>শার্ট, পাঞ্জাবি ও অন্যান্য পোশাক</p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">👗</div>
+            <h3>নারীদের পোশাক</h3>
+            <p>ড্রেস, হিজাব ও বিভিন্ন ফ্যাশন পণ্য</p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">🧒</div>
+            <h3>শিশুদের পোশাক</h3>
+            <p>শিশুদের জন্য আরামদায়ক ও সুন্দর পোশাক</p>
+          </div>
+
+        </div>
       </div>
-
-
-      <div class="cat-grid">
-
-        <button
-          class="cat"
-          data-filter="men">
-
-          <strong>👔</strong>
-
-          <span
-            data-bn="পুরুষ"
-            data-en="Men">
-            পুরুষ
-          </span>
-
-          <small
-            data-bn="পুরুষদের পোশাক"
-            data-en="Men's fashion">
-            পুরুষদের পোশাক
-          </small>
-
-        </button>
-
-
-        <button
-          class="cat"
-          data-filter="women">
-
-          <strong>👗</strong>
-
-          <span
-            data-bn="নারী"
-            data-en="Women">
-            নারী
-          </span>
-
-          <small
-            data-bn="নারীদের পোশাক"
-            data-en="Women's fashion">
-            নারীদের পোশাক
-          </small>
-
-        </button>
-
-
-        <button
-          class="cat"
-          data-filter="kids">
-
-          <strong>🧒</strong>
-
-          <span
-            data-bn="শিশু"
-            data-en="Kids">
-            শিশু
-          </span>
-
-          <small
-            data-bn="শিশুদের পোশাক"
-            data-en="Kids' fashion">
-            শিশুদের পোশাক
-          </small>
-
-        </button>
-
-      </div>
-
     </section>
 
 
-    <!-- Products -->
-    <section class="products container">
+    <!-- Shop -->
+    <section id="shop">
+      <div class="section-container">
 
-      <div class="section-head">
-
-        <div>
-
-          <span
-            class="eyebrow"
-            data-bn="পণ্য"
-            data-en="Products">
-            পণ্য
-          </span>
-
-          <h2
-            data-bn="আমাদের কালেকশন"
-            data-en="Our collection">
-            আমাদের কালেকশন
-          </h2>
-
+        <div class="section-title">
+          <h2>আমাদের পণ্য</h2>
+          <p>আপনার পছন্দের পণ্যটি বেছে নিন</p>
         </div>
 
-      </div>
-
-
-      <div id="productGrid" class="product-grid">
-
-        <!-- Products will be loaded by script.js -->
+        <div id="product-list" class="products"></div>
 
       </div>
-
     </section>
 
 
     <!-- About -->
-    <section class="about container" id="about">
+    <section id="about">
+      <div class="section-container">
 
-      <div>
+        <div class="section-title">
+          <h2>আমাদের সম্পর্কে</h2>
+          <p>Give and Take 92 সম্পর্কে কিছু কথা</p>
+        </div>
 
-        <span
-          class="eyebrow"
-          data-bn="আমাদের সম্পর্কে"
-          data-en="About us">
-          আমাদের সম্পর্কে
-        </span>
+        <div class="about-box">
 
-        <h2
-          data-bn="Give and Take 92"
-          data-en="Give and Take 92">
-          Give and Take 92
-        </h2>
+          <p>
+            <strong>Give and Take 92</strong> একটি অনলাইন পোশাকের উদ্যোগ,
+            যার লক্ষ্য হলো বিভিন্ন বাজেটের মানুষের কাছে পছন্দের পোশাক পৌঁছে দেওয়া।
+          </p>
 
-        <p
-          data-bn="আমাদের লক্ষ্য হলো সবার জন্য সুন্দর ও মানসম্মত পোশাক সহজলভ্য করা। আপনার বাজেট অনুযায়ী পছন্দের পোশাক বেছে নিন।"
-          data-en="Our goal is to make stylish and quality fashion accessible to everyone. Choose clothing that fits your style and budget.">
-          আমাদের লক্ষ্য হলো সবার জন্য সুন্দর ও মানসম্মত পোশাক সহজলভ্য করা। আপনার বাজেট অনুযায়ী পছন্দের পোশাক বেছে নিন।
-        </p>
+          <p>
+            আমরা শুধু দামি পোশাক নয়, বরং বিভিন্ন বাজেটের মানুষের জন্য
+            মানসম্মত ও আকর্ষণীয় পোশাকের সুযোগ তৈরি করতে চাই।
+          </p>
 
-      </div>
-
-    </section>
-
-
-    <!-- Contact -->
-    <section class="contact container" id="contact">
-
-      <div class="section-head">
-
-        <div>
-
-          <span
-            class="eyebrow"
-            data-bn="যোগাযোগ"
-            data-en="Contact">
-            যোগাযোগ
-          </span>
-
-          <h2
-            data-bn="অর্ডার করতে যোগাযোগ করুন"
-            data-en="Contact us to order">
-            অর্ডার করতে যোগাযোগ করুন
-          </h2>
+          <ul class="about-list">
+            <li>পুরুষ, নারী ও শিশুদের পোশাক</li>
+            <li>বিভিন্ন বাজেটের জন্য বিভিন্ন পণ্য</li>
+            <li>অনলাইনে অর্ডারের সুবিধা</li>
+            <li>ক্যাশ অন ডেলিভারি সুবিধা</li>
+            <li>গ্রাহকের সন্তুষ্টিকে গুরুত্ব দেওয়া</li>
+          </ul>
 
         </div>
 
       </div>
+    </section>
 
 
-      <div class="contact-box">
+    <!-- Features -->
+    <section>
+      <div class="section-container">
 
-        <p
-          data-bn="আপনার পছন্দের পণ্যের নাম ও প্রয়োজনীয় তথ্য পাঠিয়ে অর্ডার করতে পারেন।"
-          data-en="Send us the product name and required information to place your order.">
-          আপনার পছন্দের পণ্যের নাম ও প্রয়োজনীয় তথ্য পাঠিয়ে অর্ডার করতে পারেন।
-        </p>
+        <div class="section-title">
+          <h2>কেন Give and Take 92?</h2>
+          <p>আপনার সুবিধাকে আমরা গুরুত্ব দিই</p>
+        </div>
 
-        <a
-          class="btn primary"
-          href="mailto:giveandtake92@gmail.com"
-          data-bn="ইমেইলে যোগাযোগ করুন"
-          data-en="Contact by email">
-          ইমেইলে যোগাযোগ করুন
-        </a>
+        <div class="features">
+
+          <div class="feature">
+            <div class="feature-icon">💰</div>
+            <h3>বিভিন্ন বাজেট</h3>
+            <p>বিভিন্ন বাজেটের জন্য পণ্য</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">👕</div>
+            <h3>বিভিন্ন পোশাক</h3>
+            <p>পুরুষ, নারী ও শিশুদের পোশাক</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">🚚</div>
+            <h3>ডেলিভারি</h3>
+            <p>ক্যাশ অন ডেলিভারি সুবিধা</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">🤝</div>
+            <h3>গ্রাহকসেবা</h3>
+            <p>গ্রাহকের সন্তুষ্টিকে গুরুত্ব</p>
+          </div>
+
+        </div>
 
       </div>
+    </section>
 
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="section-container">
+
+        <div class="section-title">
+          <h2>যোগাযোগ করুন</h2>
+          <p>যেকোনো প্রশ্ন বা তথ্যের জন্য আমাদের সঙ্গে যোগাযোগ করুন</p>
+        </div>
+
+        <div class="contact-box">
+
+          <p>
+            <strong>Give and Take 92</strong>
+          </p>
+
+          <p>
+            📍 63 Purana Paltan, Dhaka 1000, Bangladesh
+          </p>
+
+          <p>
+            📧
+            <span class="contact-email">
+              alimmiaaibl@gmail.com
+            </span>
+          </p>
+
+          <p>
+            💳 পেমেন্ট: ক্যাশ অন ডেলিভারি
+          </p>
+
+        </div>
+
+      </div>
     </section>
 
   </main>
@@ -349,30 +659,157 @@
   <!-- Footer -->
   <footer>
 
-    <div class="container">
+    <p>
+      © <span id="year"></span> Give and Take 92. সর্বস্বত্ব সংরক্ষিত।
+    </p>
 
-      <p>
-        © 2026 Give and Take 92.
-        <span
-          data-bn="সর্বস্বত্ব সংরক্ষিত।"
-          data-en="All rights reserved.">
-          সর্বস্বত্ব সংরক্ষিত।
-        </span>
-      </p>
-
-      <p
-        data-bn="Style for every budget"
-        data-en="Style for every budget">
-        Style for every budget
-      </p>
-
-    </div>
+    <p>
+      Style for Every Budget
+    </p>
 
   </footer>
 
 
-  <!-- JavaScript -->
-  <script src="script.js"></script>
+  <script>
+
+    /*
+      ==========================================
+      GIVE AND TAKE 92 - PRODUCT LIST
+      ==========================================
+
+      ভবিষ্যতে নতুন পণ্য যোগ করতে চাইলে
+      নিচের তালিকায় নতুন একটি পণ্য যোগ করবেন।
+
+      উদাহরণ:
+
+      {
+        name: "নতুন শার্ট",
+        category: "পুরুষদের পোশাক",
+        price: 850,
+        icon: "👕"
+      }
+
+      শুধু এই তালিকায় পণ্য যোগ করলেই
+      ওয়েবসাইটে নতুন পণ্য দেখা যাবে।
+    */
+
+
+    const products = [
+
+      {
+        name: "Classic Shirt",
+        category: "পুরুষদের পোশাক",
+        price: 790,
+        icon: "👔"
+      },
+
+      {
+        name: "Panjabi",
+        category: "পুরুষদের পোশাক",
+        price: 990,
+        icon: "🥻"
+      },
+
+      {
+        name: "Modest Dress",
+        category: "নারীদের পোশাক",
+        price: 1190,
+        icon: "👗"
+      },
+
+      {
+        name: "Hijab Set",
+        category: "নারীদের পোশাক",
+        price: 650,
+        icon: "🧕"
+      },
+
+      {
+        name: "Kids T-shirt",
+        category: "শিশুদের পোশাক",
+        price: 450,
+        icon: "👕"
+      },
+
+      {
+        name: "Kids Dress",
+        category: "শিশুদের পোশাক",
+        price: 750,
+        icon: "👗"
+      }
+
+    ];
+
+
+    const productList = document.getElementById("product-list");
+
+
+    function showProducts() {
+
+      productList.innerHTML = "";
+
+      products.forEach(function(product) {
+
+        const card = document.createElement("div");
+
+        card.className = "product-card";
+
+        card.innerHTML = `
+
+          <div class="product-image">
+            ${product.icon}
+          </div>
+
+          <div class="product-info">
+
+            <h3>${product.name}</h3>
+
+            <div class="product-category">
+              ${product.category}
+            </div>
+
+            <div class="price">
+              ৳${product.price.toLocaleString("en-BD")}
+            </div>
+
+            <button
+              class="order-btn"
+              onclick="orderProduct('${product.name}', ${product.price})">
+              অর্ডার করুন
+            </button>
+
+          </div>
+
+        `;
+
+        productList.appendChild(card);
+
+      });
+
+    }
+
+
+    function orderProduct(name, price) {
+
+      alert(
+        "আপনি নির্বাচন করেছেন:\n\n" +
+        name +
+        "\nমূল্য: ৳" +
+        price.toLocaleString("en-BD") +
+        "\n\nঅর্ডার করার জন্য আমাদের ইমেইলে যোগাযোগ করুন:\n" +
+        "alimmiaaibl@gmail.com"
+      );
+
+    }
+
+
+    showProducts();
+
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+  </script>
 
 </body>
 </html>
