@@ -4,812 +4,315 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Give and Take 92 - প্রতিটি বাজেটের জন্য স্টাইল। পুরুষ, নারী ও শিশুদের পোশাক অনলাইনে অর্ডার করুন।">
-  <meta name="keywords" content="Give and Take 92, পোশাক, ফ্যাশন, শপিং, বাংলাদেশ, men's fashion, women's fashion, kids fashion">
-  <meta name="author" content="Give and Take 92">
+  <meta name="description" content="Give and Take 92 - প্রতিটি বাজেটের জন্য স্টাইল। পুরুষ, নারী ও শিশুদের পোশাক, জুতা এবং ফ্যাশন পণ্য অনলাইনে।">
 
   <title>Give and Take 92 | প্রতিটি বাজেটের জন্য স্টাইল</title>
 
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, "Noto Sans Bengali", sans-serif;
-      line-height: 1.7;
+      line-height: 1.6;
       background: #f5f9ff;
       color: #222;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    button {
-      font-family: inherit;
-      cursor: pointer;
-    }
-
-    /* Header */
     header {
-      background: #ffffff;
-      border-bottom: 1px solid #e5e5e5;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .header-container {
-      max-width: 1150px;
-      margin: auto;
-      padding: 12px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo-area {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-area img {
-      width: 52px;
-      height: 52px;
-      object-fit: contain;
-      border-radius: 10px;
-    }
-
-    .logo-text h1 {
-      font-size: 20px;
-      color: #0756a3;
-      line-height: 1.2;
-    }
-
-    .logo-text p {
-      font-size: 12px;
-      color: #555;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    nav a {
-      padding: 8px 12px;
-      color: #333;
-      border-radius: 7px;
-      font-size: 15px;
-    }
-
-    nav a:hover {
-      background: #eaf4ff;
-      color: #0756a3;
-    }
-
-    .language-btn {
-      background: #0756a3;
-      color: white !important;
-    }
-
-    /* Hero */
-    .hero {
-      background: linear-gradient(135deg, #eaf5ff, #ffffff);
-      padding: 75px 20px;
-      text-align: center;
-    }
-
-    .hero-content {
-      max-width: 850px;
-      margin: auto;
-    }
-
-    .hero h2 {
-      color: #0756a3;
-      font-size: 38px;
-      margin-bottom: 12px;
-    }
-
-    .hero h3 {
-      font-size: 22px;
-      margin-bottom: 15px;
-      color: #333;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: 0 auto 25px;
-      color: #555;
-      font-size: 17px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 11px 22px;
-      border-radius: 8px;
-      font-weight: bold;
-      border: none;
-      transition: 0.2s;
-    }
-
-    .btn-primary {
-      background: #0756a3;
+      background: #0b5ed7;
       color: white;
-    }
-
-    .btn-primary:hover {
-      background: #043d75;
-    }
-
-    .btn-light {
-      background: white;
-      color: #0756a3;
-      border: 1px solid #0756a3;
-    }
-
-    .btn-light:hover {
-      background: #eaf4ff;
-    }
-
-    /* Common Section */
-    section {
-      padding: 60px 20px;
-    }
-
-    .section-container {
-      max-width: 1150px;
-      margin: auto;
-    }
-
-    .section-title {
+      padding: 18px 15px;
       text-align: center;
-      margin-bottom: 35px;
     }
 
-    .section-title h2 {
-      font-size: 30px;
-      color: #0756a3;
-      margin-bottom: 7px;
-    }
-
-    .section-title p {
-      color: #666;
-    }
-
-    /* Categories */
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .category-card {
-      background: white;
-      border-radius: 12px;
-      padding: 25px;
-      text-align: center;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.07);
-      border: 1px solid #edf2f7;
-    }
-
-    .category-icon {
-      font-size: 40px;
-      margin-bottom: 8px;
-    }
-
-    .category-card h3 {
-      color: #0756a3;
+    header h1 {
+      font-size: 28px;
       margin-bottom: 5px;
     }
 
-    /* Products */
-    #shop {
-      background: #ffffff;
+    header p {
+      font-size: 16px;
+    }
+
+    nav {
+      background: white;
+      padding: 12px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #0b5ed7;
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 55px 20px;
+      background: linear-gradient(135deg, #e8f2ff, #ffffff);
+    }
+
+    .hero h2 {
+      color: #0b5ed7;
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 22px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #0b5ed7;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 45px 20px;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #0b5ed7;
+      margin-bottom: 25px;
+      font-size: 28px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+    }
+
+    .category {
+      background: white;
+      padding: 25px 15px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      font-size: 18px;
+      font-weight: bold;
     }
 
     .products {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
     }
 
-    .product-card {
-      background: #fff;
-      border: 1px solid #e5e9ef;
+    .product {
+      background: white;
       border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.05);
-      transition: transform 0.2s, box-shadow 0.2s;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
     }
 
-    .product-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 7px 20px rgba(0,0,0,0.09);
+    .product .icon {
+      font-size: 55px;
+      margin-bottom: 10px;
     }
 
-    .product-image {
-      height: 220px;
-      background: #edf5fc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 65px;
-    }
-
-    .product-info {
-      padding: 18px;
-    }
-
-    .product-info h3 {
-      color: #222;
+    .product h3 {
+      color: #0b5ed7;
       margin-bottom: 5px;
-      font-size: 19px;
-    }
-
-    .product-category {
-      color: #777;
-      font-size: 13px;
-      margin-bottom: 8px;
     }
 
     .price {
-      color: #0756a3;
-      font-weight: bold;
       font-size: 20px;
-      margin-bottom: 12px;
+      font-weight: bold;
+      margin: 10px 0;
     }
 
-    .order-btn {
-      width: 100%;
-      border: none;
-      background: #0756a3;
+    .order-button {
+      display: inline-block;
+      background: #198754;
       color: white;
-      padding: 10px;
+      padding: 10px 18px;
       border-radius: 7px;
-      font-size: 15px;
-    }
-
-    .order-btn:hover {
-      background: #043d75;
-    }
-
-    /* About */
-    .about-box {
-      background: white;
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.06);
-    }
-
-    .about-box p {
-      margin-bottom: 15px;
-      color: #555;
-    }
-
-    .about-list {
-      padding-left: 20px;
-      color: #444;
-    }
-
-    .about-list li {
-      margin-bottom: 7px;
-    }
-
-    /* Features */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .feature {
-      background: white;
-      padding: 22px 15px;
-      border-radius: 10px;
-      text-align: center;
-      border: 1px solid #edf2f7;
-    }
-
-    .feature-icon {
-      font-size: 30px;
-      margin-bottom: 8px;
-    }
-
-    .feature h3 {
-      color: #0756a3;
-      font-size: 17px;
-    }
-
-    .feature p {
-      font-size: 13px;
-      color: #666;
-    }
-
-    /* Contact */
-    #contact {
-      background: #eaf5ff;
-    }
-
-    .contact-box {
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .contact-box p {
-      margin: 8px 0;
-      color: #555;
-    }
-
-    .contact-email {
-      color: #0756a3;
+      text-decoration: none;
       font-weight: bold;
     }
 
-    /* Footer */
+    .about,
+    .contact {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    }
+
     footer {
-      background: #0756a3;
+      background: #0b5ed7;
       color: white;
       text-align: center;
-      padding: 25px 20px;
-    }
-
-    footer p {
-      margin: 5px 0;
-      font-size: 14px;
-    }
-
-    /* Mobile */
-    @media (max-width: 850px) {
-      .products {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .categories {
-        grid-template-columns: 1fr;
-      }
-
-      .features {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .header-container {
-        flex-direction: column;
-      }
-
-      nav {
-        width: 100%;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .hero {
-        padding: 55px 18px;
-      }
-
-      .hero h2 {
-        font-size: 29px;
-      }
-
-      .hero h3 {
-        font-size: 19px;
-      }
-
-      .hero p {
-        font-size: 15px;
-      }
-
-      .products {
-        grid-template-columns: 1fr;
-      }
-
-      .features {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .logo-text h1 {
-        font-size: 18px;
-      }
-
-      nav a {
-        font-size: 13px;
-        padding: 7px 9px;
-      }
+      padding: 25px 15px;
+      margin-top: 20px;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Header -->
   <header>
-    <div class="header-container">
-
-      <a href="#home" class="logo-area">
-        <img src="assets/logo.png" alt="Give and Take 92 Logo">
-        <div class="logo-text">
-          <h1>Give and Take 92</h1>
-          <p>Style for Every Budget</p>
-        </div>
-      </a>
-
-      <nav>
-        <a href="#home">হোম</a>
-        <a href="#shop">শপ</a>
-        <a href="#about">আমাদের সম্পর্কে</a>
-        <a href="#contact">যোগাযোগ</a>
-        <a href="#shop" class="language-btn">English</a>
-      </nav>
-
-    </div>
+    <h1>Give and Take 92</h1>
+    <p>Style for Every Budget | প্রতিটি বাজেটের জন্য স্টাইল</p>
   </header>
 
+  <nav>
+    <a href="#home">হোম</a>
+    <a href="#shop">শপ</a>
+    <a href="#about">আমাদের সম্পর্কে</a>
+    <a href="#contact">যোগাযোগ</a>
+  </nav>
 
-  <!-- Hero -->
-  <main>
+  <section class="hero" id="home">
+    <h2>প্রতিটি বাজেটের জন্য স্টাইল</h2>
+    <p>পুরুষ, নারী ও শিশুদের পোশাক, জুতা এবং ফ্যাশন পণ্য।</p>
+    <a href="#shop" class="button">শপ করুন</a>
+  </section>
 
-    <section id="home" class="hero">
-      <div class="hero-content">
+  <section>
+    <h2>ক্যাটাগরি</h2>
 
-        <h2>Give and Take 92</h2>
+    <div class="categories">
+      <div class="category">👔 পুরুষদের পোশাক</div>
+      <div class="category">👗 নারীদের পোশাক</div>
+      <div class="category">👕 শিশুদের পোশাক</div>
+      <div class="category">🧕 হিজাব ও মডেস্ট ওয়্যার</div>
+      <div class="category">👟 জুতা</div>
+    </div>
+  </section>
 
-        <h3>প্রতিটি বাজেটের জন্য স্টাইল</h3>
+  <section id="shop">
+    <h2>জনপ্রিয় পণ্য</h2>
 
-        <p>
-          আপনার বাজেট ও পছন্দ অনুযায়ী সুন্দর এবং মানসম্মত পোশাক খুঁজে নিন।
-          পুরুষ, নারী ও শিশুদের জন্য বিভিন্ন ধরনের পোশাক নিয়ে আমাদের অনলাইন যাত্রা।
-        </p>
+    <div class="products">
 
-        <div class="hero-buttons">
-          <a href="#shop" class="btn btn-primary">শপ করুন</a>
-          <a href="#about" class="btn btn-light">আমাদের সম্পর্কে</a>
-        </div>
-
+      <div class="product">
+        <div class="icon">👔</div>
+        <h3>Classic Shirt</h3>
+        <p>পুরুষদের স্টাইলিশ শার্ট</p>
+        <div class="price">৳790</div>
+        <a class="order-button" href="https://wa.me/8801672596905">WhatsApp-এ অর্ডার করুন</a>
       </div>
-    </section>
 
-
-    <!-- Categories -->
-    <section>
-      <div class="section-container">
-
-        <div class="section-title">
-          <h2>ক্যাটাগরি</h2>
-          <p>আপনার পছন্দের ক্যাটাগরি থেকে পোশাক বেছে নিন</p>
-        </div>
-
-        <div class="categories">
-
-          <div class="category-card">
-            <div class="category-icon">👔</div>
-            <h3>পুরুষদের পোশাক</h3>
-            <p>শার্ট, পাঞ্জাবি ও অন্যান্য পোশাক</p>
-          </div>
-
-          <div class="category-card">
-            <div class="category-icon">👗</div>
-            <h3>নারীদের পোশাক</h3>
-            <p>ড্রেস, হিজাব ও বিভিন্ন ফ্যাশন পণ্য</p>
-          </div>
-
-          <div class="category-card">
-            <div class="category-icon">🧒</div>
-            <h3>শিশুদের পোশাক</h3>
-            <p>শিশুদের জন্য আরামদায়ক ও সুন্দর পোশাক</p>
-          </div>
-
-        </div>
+      <div class="product">
+        <div class="icon">🥻</div>
+        <h3>Panjabi</h3>
+        <p>আকর্ষণীয় পাঞ্জাবি</p>
+        <div class="price">৳990</div>
+        <a class="order-button" href="https://wa.me/8801672596905">WhatsApp-এ অর্ডার করুন</a>
       </div>
-    </section>
 
-
-    <!-- Shop -->
-    <section id="shop">
-      <div class="section-container">
-
-        <div class="section-title">
-          <h2>আমাদের পণ্য</h2>
-          <p>আপনার পছন্দের পণ্যটি বেছে নিন</p>
-        </div>
-
-        <div id="product-list" class="products"></div>
-
+      <div class="product">
+        <div class="icon">👗</div>
+        <h3>Modest Dress</h3>
+        <p>মার্জিত ও সুন্দর পোশাক</p>
+        <div class="price">৳1,190</div>
+        <a class="order-button" href="https://wa.me/8801672596905">WhatsApp-এ অর্ডার করুন</a>
       </div>
-    </section>
 
-
-    <!-- About -->
-    <section id="about">
-      <div class="section-container">
-
-        <div class="section-title">
-          <h2>আমাদের সম্পর্কে</h2>
-          <p>Give and Take 92 সম্পর্কে কিছু কথা</p>
-        </div>
-
-        <div class="about-box">
-
-          <p>
-            <strong>Give and Take 92</strong> একটি অনলাইন পোশাকের উদ্যোগ,
-            যার লক্ষ্য হলো বিভিন্ন বাজেটের মানুষের কাছে পছন্দের পোশাক পৌঁছে দেওয়া।
-          </p>
-
-          <p>
-            আমরা শুধু দামি পোশাক নয়, বরং বিভিন্ন বাজেটের মানুষের জন্য
-            মানসম্মত ও আকর্ষণীয় পোশাকের সুযোগ তৈরি করতে চাই।
-          </p>
-
-          <ul class="about-list">
-            <li>পুরুষ, নারী ও শিশুদের পোশাক</li>
-            <li>বিভিন্ন বাজেটের জন্য বিভিন্ন পণ্য</li>
-            <li>অনলাইনে অর্ডারের সুবিধা</li>
-            <li>ক্যাশ অন ডেলিভারি সুবিধা</li>
-            <li>গ্রাহকের সন্তুষ্টিকে গুরুত্ব দেওয়া</li>
-          </ul>
-
-        </div>
-
+      <div class="product">
+        <div class="icon">🧕</div>
+        <h3>Hijab Set</h3>
+        <p>সুন্দর হিজাব সেট</p>
+        <div class="price">৳650</div>
+        <a class="order-button" href="https://wa.me/8801672596905">WhatsApp-এ অর্ডার করুন</a>
       </div>
-    </section>
 
-
-    <!-- Features -->
-    <section>
-      <div class="section-container">
-
-        <div class="section-title">
-          <h2>কেন Give and Take 92?</h2>
-          <p>আপনার সুবিধাকে আমরা গুরুত্ব দিই</p>
-        </div>
-
-        <div class="features">
-
-          <div class="feature">
-            <div class="feature-icon">💰</div>
-            <h3>বিভিন্ন বাজেট</h3>
-            <p>বিভিন্ন বাজেটের জন্য পণ্য</p>
-          </div>
-
-          <div class="feature">
-            <div class="feature-icon">👕</div>
-            <h3>বিভিন্ন পোশাক</h3>
-            <p>পুরুষ, নারী ও শিশুদের পোশাক</p>
-          </div>
-
-          <div class="feature">
-            <div class="feature-icon">🚚</div>
-            <h3>ডেলিভারি</h3>
-            <p>ক্যাশ অন ডেলিভারি সুবিধা</p>
-          </div>
-
-          <div class="feature">
-            <div class="feature-icon">🤝</div>
-            <h3>গ্রাহকসেবা</h3>
-            <p>গ্রাহকের সন্তুষ্টিকে গুরুত্ব</p>
-          </div>
-
-        </div>
-
+      <div class="product">
+        <div class="icon">👕</div>
+        <h3>Kids T-shirt</h3>
+        <p>শিশুদের আরামদায়ক টি-শার্ট</p>
+        <div class="price">৳450</div>
+        <a class="order-button" href="https://wa.me/8801672596905">WhatsApp-এ অর্ডার করুন</a>
       </div>
-    </section>
 
-
-    <!-- Contact -->
-    <section id="contact">
-      <div class="section-container">
-
-        <div class="section-title">
-          <h2>যোগাযোগ করুন</h2>
-          <p>যেকোনো প্রশ্ন বা তথ্যের জন্য আমাদের সঙ্গে যোগাযোগ করুন</p>
-        </div>
-
-        <div class="contact-box">
-
-          <p>
-            <strong>Give and Take 92</strong>
-          </p>
-
-          <p>
-            📍 63 Purana Paltan, Dhaka 1000, Bangladesh
-          </p>
-
-          <p>
-            📧
-            <span class="contact-email">
-              alimmiaaibl@gmail.com
-            </span>
-          </p>
-
-          <p>
-            💳 পেমেন্ট: ক্যাশ অন ডেলিভারি
-          </p>
-
-        </div>
-
+      <div class="product">
+        <div class="icon">👚</div>
+        <h3>Kids Dress</h3>
+        <p>শিশুদের সুন্দর পোশাক</p>
+        <div class="price">৳750</div>
+        <a class="order-button" href="https://wa.me/8801672596905">WhatsApp-এ অর্ডার করুন</a>
       </div>
-    </section>
 
-  </main>
+      <div class="product">
+        <div class="icon">👟</div>
+        <h3>Fashion Shoes</h3>
+        <p>স্টাইলিশ ও আরামদায়ক জুতা</p>
+        <div class="price">৳850</div>
+        <a class="order-button" href="https://wa.me/8801672596905">WhatsApp-এ অর্ডার করুন</a>
+      </div>
 
+    </div>
+  </section>
 
-  <!-- Footer -->
+  <section id="about">
+    <h2>আমাদের সম্পর্কে</h2>
+
+    <div class="about">
+      <p>
+        <strong>Give and Take 92</strong> এমন একটি অনলাইন ফ্যাশন প্ল্যাটফর্ম,
+        যেখানে বিভিন্ন বাজেটের মানুষের জন্য সুন্দর ও মানসম্মত পোশাক এবং
+        ফ্যাশন পণ্য দেওয়ার চেষ্টা করা হয়।
+      </p>
+
+      <br>
+
+      <p>
+        আমাদের লক্ষ্য হলো—সবার বাজেটের মধ্যে পছন্দের পণ্য খুঁজে পাওয়ার
+        সুযোগ তৈরি করা।
+      </p>
+
+      <br>
+
+      <p>
+        <strong>Style for Every Budget</strong> —
+        প্রতিটি বাজেটের জন্য স্টাইল।
+      </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>যোগাযোগ</h2>
+
+    <div class="contact">
+      <p><strong>Give and Take 92</strong></p>
+      <p>📍 63 Purana Paltan, Dhaka 1000, Bangladesh</p>
+      <p>📧 alimmiaaibl@gmail.com</p>
+      <p>📱 WhatsApp: +8801672596905</p>
+      <p>🚚 Cash on Delivery available</p>
+
+      <br>
+
+      <a class="button" href="https://wa.me/8801672596905">
+        WhatsApp-এ যোগাযোগ করুন
+      </a>
+    </div>
+  </section>
+
   <footer>
-
-    <p>
-      © <span id="year"></span> Give and Take 92. সর্বস্বত্ব সংরক্ষিত।
-    </p>
-
-    <p>
-      Style for Every Budget
-    </p>
-
+    <p>© 2026 Give and Take 92. All Rights Reserved.</p>
+    <p>Style for Every Budget</p>
   </footer>
-
-
-  <script>
-
-    /*
-      ==========================================
-      GIVE AND TAKE 92 - PRODUCT LIST
-      ==========================================
-
-      ভবিষ্যতে নতুন পণ্য যোগ করতে চাইলে
-      নিচের তালিকায় নতুন একটি পণ্য যোগ করবেন।
-
-      উদাহরণ:
-
-      {
-        name: "নতুন শার্ট",
-        category: "পুরুষদের পোশাক",
-        price: 850,
-        icon: "👕"
-      }
-
-      শুধু এই তালিকায় পণ্য যোগ করলেই
-      ওয়েবসাইটে নতুন পণ্য দেখা যাবে।
-    */
-
-
-    const products = [
-
-      {
-        name: "Classic Shirt",
-        category: "পুরুষদের পোশাক",
-        price: 790,
-        icon: "👔"
-      },
-
-      {
-        name: "Panjabi",
-        category: "পুরুষদের পোশাক",
-        price: 990,
-        icon: "🥻"
-      },
-
-      {
-        name: "Modest Dress",
-        category: "নারীদের পোশাক",
-        price: 1190,
-        icon: "👗"
-      },
-
-      {
-        name: "Hijab Set",
-        category: "নারীদের পোশাক",
-        price: 650,
-        icon: "🧕"
-      },
-
-      {
-        name: "Kids T-shirt",
-        category: "শিশুদের পোশাক",
-        price: 450,
-        icon: "👕"
-      },
-
-      {
-        name: "Kids Dress",
-        category: "শিশুদের পোশাক",
-        price: 750,
-        icon: "👗"
-      }
-
-    ];
-
-
-    const productList = document.getElementById("product-list");
-
-
-    function showProducts() {
-
-      productList.innerHTML = "";
-
-      products.forEach(function(product) {
-
-        const card = document.createElement("div");
-
-        card.className = "product-card";
-
-        card.innerHTML = `
-
-          <div class="product-image">
-            ${product.icon}
-          </div>
-
-          <div class="product-info">
-
-            <h3>${product.name}</h3>
-
-            <div class="product-category">
-              ${product.category}
-            </div>
-
-            <div class="price">
-              ৳${product.price.toLocaleString("en-BD")}
-            </div>
-
-            <button
-              class="order-btn"
-              onclick="orderProduct('${product.name}', ${product.price})">
-              অর্ডার করুন
-            </button>
-
-          </div>
-
-        `;
-
-        productList.appendChild(card);
-
-      });
-
-    }
-
-
-    function orderProduct(name, price) {
-
-      alert(
-        "আপনি নির্বাচন করেছেন:\n\n" +
-        name +
-        "\nমূল্য: ৳" +
-        price.toLocaleString("en-BD") +
-        "\n\nঅর্ডার করার জন্য আমাদের ইমেইলে যোগাযোগ করুন:\n" +
-        "alimmiaaibl@gmail.com"
-      );
-
-    }
-
-
-    showProducts();
-
-
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-
-  </script>
 
 </body>
 </html>
